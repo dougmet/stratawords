@@ -1,9 +1,10 @@
 library(dplyr)
 library(igraph)
+library(stringi)
 
-source("getdata.R")
+strata <- fromJSON("strata.json", simplifyDataFrame = FALSE)
 
-year <- "2012"
+year <- "2016"
 
 titles <- vapply(strata[[year]], function(x) x$title, "a")
 
