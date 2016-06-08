@@ -48,6 +48,10 @@ vl <- data.frame(name = apache, mentions = as.numeric(table(allApache)[apache]))
 
 g <- graph_from_data_frame(el, vertices = vl, directed = FALSE)
 
+#library(svglite)
+#svglite(paste0("ApacheNet", year, ".svg"))
 pdf(paste0("ApacheNet", year, ".pdf"))
+op <- par(mar=c(0,0,1,0))
 plot(g, edge.width=E(g)$weight, vertex.size = 5*V(g)$mentions)
+par(op)
 dev.off()
