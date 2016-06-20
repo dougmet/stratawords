@@ -2,11 +2,16 @@
 title: "Apache Projects at Strata EU"
 author: "Douglas Ashton"
 date: "7 June 2016"
-output: md_document
+output:
+  html_document:
+    keep_md: true
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+set.seed(14)
+projectinfo <- read.csv("projectinfo.csv", stringsAsFactors = FALSE)
 ```
 
 # Apache Projects at Strata EU
@@ -37,8 +42,15 @@ descriptions <- vapply(strata[[year]], `[[`, "a", "description")
 # Match anything that comes after the work "Apache"
 allApache <- na.omit(stringi::stri_match(c(titles, descriptions), regex = "[Aa]pache (\\w+)"))[,2]
 apache <- unique(allApache)
+```
 
-knitr::kable(data.frame(Count = sort(table(allApache), decreasing = TRUE)), format = "markdown")
+```{r, makeApacheTable, echo = FALSE, results = 'asis'}
+apacheDF <- dplyr::add_rownames(data.frame(Count = sort(table(allApache), decreasing = TRUE)), 
+                                var = "Project")
+apacheDF <- dplyr::inner_join(apacheDF, projectinfo, by = "Project")
+apacheDF$Link <- paste0("<a href=\"", apacheDF$Link, "\">", apacheDF$Link, "</a>")
+
+knitr::kable(apacheDF, format = "markdown")
 ```
 
 ### Co-occurance of projects
@@ -95,7 +107,7 @@ plot(g, edge.width=E(g)$weight, vertex.size = 5*V(g)$mentions)
 
 ### Apache through the years
 
-If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years.
+If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years. In 2012 Hadoop is the only 
 
 ![Strata Apache Projects all years](allYears.svg)
 
