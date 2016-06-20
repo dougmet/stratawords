@@ -99,7 +99,7 @@ If you feel that the complexity of the Apache project ecosystem is increasing th
 
 ```{r, printGraphs, echo = FALSE, results = 'asis'}
 for(year in names(strata)) {
-cat(paste0("![Strata Apache Mentions Graph ", year, "](apache", year, ".svg)\n\n"))
+cat(paste0("![Strata Apache Mentions Graph ", year, "](img/apache", year, ".svg)\n\n"))
 }
 ```
 

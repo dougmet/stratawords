@@ -155,12 +155,12 @@ If you feel that the complexity of the Apache project ecosystem is
 increasing then you are not wrong! We can look at how this co-occurance
 graph changes through the years.
 
-![Strata Apache Mentions Graph 2012](apache2012.svg)
+![Strata Apache Mentions Graph 2012](img/apache2012.svg)
 
-![Strata Apache Mentions Graph 2013](apache2013.svg)
+![Strata Apache Mentions Graph 2013](img/apache2013.svg)
 
-![Strata Apache Mentions Graph 2014](apache2014.svg)
+![Strata Apache Mentions Graph 2014](img/apache2014.svg)
 
-![Strata Apache Mentions Graph 2015](apache2015.svg)
+![Strata Apache Mentions Graph 2015](img/apache2015.svg)
 
-![Strata Apache Mentions Graph 2016](apache2016.svg)
+![Strata Apache Mentions Graph 2016](img/apache2016.svg)
