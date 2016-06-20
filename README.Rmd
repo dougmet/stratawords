@@ -14,8 +14,6 @@ set.seed(14)
 projectinfo <- read.csv("projectinfo.csv", stringsAsFactors = FALSE)
 ```
 
-# Apache Projects at Strata EU
-
 At the beginning of June Mango made the trip to the [Strata + Hadoop World](http://strataconf.com/) big data conference at the Excel Centre in London. I've been to Strata twice now and find it a great way to catch up with how people are using different technologies to get their job done. Sometimes it can really hard keeping track of all of the latest tools and how they complement one another; so an event like Strata can really bring it all together.
 
 One thing that's really noticeable is the dramatic increase in the number of projects from the [Apache Software Foundation](http://www.apache.org). Apache is possibly still most famous for its eponymous HTTP server but it is also a driving force in the open source community. Many of the most famous big data technologies have been donated to the Apache Software Foundation, such as [Hadoop](http://hadoop.apache.org/) and [Spark](http://spark.apache.org/).
@@ -96,21 +94,19 @@ el <- el %>% group_by(from, to) %>% summarise(weight = n())
 # Data frame of vertices
 vl <- data.frame(name = apache, mentions = as.numeric(table(allApache)[apache]))
 
-
 # Build the graph ---------------------------------------------------------
-
 g <- graph_from_data_frame(el, vertices = vl, directed = FALSE)
-
 
 plot(g, edge.width=E(g)$weight, vertex.size = 5*V(g)$mentions)
 ```
 
 ### Apache through the years
 
-If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years. In 2012 Hadoop is the only 
+If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years. In 2012 Hadoop is the only project and gradually others were added. I remember last year as being the year of Spark and that seems to pan out in the numbers here. Interestingly it seems that mentions of Hadoop itself are relatively going down. This could suggest that it's just assumed that this big data stack is living in an Hadoop ecosystem or perhaps alternatives to HDFS mean that it's not so much the core of big data any longer.
 
-![Strata Apache Projects all years](allYears.svg)
+![Strata Apache Projects all years](https://raw.githubusercontent.com/dougmet/stratawords/master/allYears.svg)
 
 
+<!-- ![Strata Apache Projects all years](allYears.svg) -->
 
 
