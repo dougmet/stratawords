@@ -97,11 +97,7 @@ plot(g, edge.width=E(g)$weight, vertex.size = 5*V(g)$mentions)
 
 If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years.
 
-```{r, printGraphs, echo = FALSE, results = 'asis'}
-for(year in names(strata)) {
-cat(paste0("![Strata Apache Mentions Graph ", year, "](img/apache", year, ".svg)\n\n"))
-}
-```
+![Strata Apache Projects all years](allYears.svg)
 
 
 
