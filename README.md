@@ -4,7 +4,7 @@ Douglas Ashton
 
 
 
-At the beginning of June Mango made the trip to the [Strata + Hadoop World](http://strataconf.com/) big data conference at the Excel Centre in London. I've been to Strata twice now and find it a great way to catch up with how people are using different technologies to get their job done. Sometimes it can really hard keeping track of all of the latest tools and how they complement one another; so an event like Strata can really bring it all together.
+At the beginning of June Mango made the trip to the [Strata + Hadoop World](http://strataconf.com/) big data conference at the Excel Centre in London. I've been to Strata twice now and find it a great way to catch up with how people are using different technologies to get their job done. Sometimes it can be really hard keeping track of all of the latest tools and how they complement one another; so an event like Strata can really bring it all together.
 
 One thing that's really noticeable is the dramatic increase in the number of projects from the [Apache Software Foundation](http://www.apache.org). Apache is possibly still most famous for its eponymous HTTP server but it is also a driving force in the open source community. Many of the most famous big data technologies have been donated to the Apache Software Foundation, such as [Hadoop](http://hadoop.apache.org/) and [Spark](http://spark.apache.org/).
 
