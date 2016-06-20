@@ -104,7 +104,7 @@ plot(g, edge.width=E(g)$weight, vertex.size = 5*V(g)$mentions)
 
 If you feel that the complexity of the Apache project ecosystem is increasing then you are not wrong! We can look at how this co-occurance graph changes through the years. In 2012 Hadoop is the only project and gradually others were added. I remember last year as being the year of Spark and that seems to pan out in the numbers here. Interestingly it seems that mentions of Hadoop itself are relatively going down. This could suggest that it's just assumed that this big data stack is living in an Hadoop ecosystem or perhaps alternatives to HDFS mean that it's not so much the core of big data any longer.
 
-![Strata Apache Projects all years](https://raw.githubusercontent.com/dougmet/stratawords/master/allYears.svg)
+<img src="https://raw.githubusercontent.com/dougmet/stratawords/master/allYears.svg" alt = "Strata Apache Projects all years">
 
 
 <!-- ![Strata Apache Projects all years](allYears.svg) -->
